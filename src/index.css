@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.leaflet-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+.leaflet-tile {
+  filter: hue-rotate(180deg) brightness(1.1); /* Match navy-teal palette */
+}
+
+/* Ensure background image covers without stretching */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Smooth background transition */
+.bg-loaded {
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Remove excessive blur from main container */
+main > div {
+  backdrop-filter: blur(4px); /* Reduced blur for clarity */
+}
